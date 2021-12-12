@@ -1,3 +1,4 @@
+#ALB
 resource "aws_elb" "terraform-blue-green" {
   name            = "terraform-blue-green-v${var.infrastructure_version}"
   subnets         = ["${aws_subnet.terraform-blue-green.*.id}"]
